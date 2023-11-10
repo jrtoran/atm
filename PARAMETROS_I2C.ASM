@@ -1,0 +1,36 @@
+;CONFIGURACION BUS I2C
+
+/* General Master Status Codes */
+.EQU I2C_START = 0x08
+.EQU REP_START = 0x10
+/* Master Transmitter Status Codes */
+.EQU MT_SLA_ACK = 0x18
+.EQU MT_SLA_NACK = 0x20
+.EQU MT_DATA_ACK = 0x28
+.EQU MT_DATA_NACK = 0x30
+.EQU# MT_ARB_LOST = 0x38
+/* Master Receiver Status Codes */
+.EQU MR_ARB_LOST = 0x38
+.EQU MR_SLA_ACK = 0x40
+.EQU MR_SLA_NACK = 0x48
+.EQU MR_DATA_ACK = 0x50
+.EQU MR_DATA_NACK = 0x58
+/* Slave Receiver Status Codes */
+.EQU SR_SLA_ACK = 0x60
+.EQU SR_ARB_LOST_SLA_ACK = 0x68
+.EQU SR_GCALL_ACK = 0x70
+.EQU SR_ARB_LOST_GCALL_ACK = 0x78
+.EQU SR_DATA_ACK = 0x80
+.EQU SR_DATA_NACK = 0x88
+.EQU SR_GCALL_DATA_ACK = 0x90
+.EQU SR_GCALL_DATA_NACK = 0x98
+.EQU SR_STOP = 0xA0
+/* Slave Transmitter Status Codes */
+.EQU ST_SLA_ACK = 0xA8
+.EQU ST_ARB_LOST_SLA_ACK = 0xB0
+.EQU ST_DATA_ACK = 0xB8
+.EQU ST_DATA_NACK = 0xC0
+.EQU ST_LAST_DATA = 0xC8
+/* Miscellaneous States */
+.EQU NO_INFO = 0xF8
+.EQU BUS_ERROR = 0x00
